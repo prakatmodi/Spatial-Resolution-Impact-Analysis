@@ -52,10 +52,16 @@ def rsqr(sim, obs):
     else:
         return(rsqrc)
 
+
 # ----------------------- Import Data related to Rivers ---------------------- #
 
-# Make the regional Map data based on these map boundary before perfoming the analysis 
-# also simulation should be pefromed this map boundary
+""" 
+Make the regional Map data based on these map boundary before perfoming the analysis. 
+CaMa-FLood simulation should be pefromed using this map boundary for year 2008,
+for with and without bifurcation scheme 
+at various resolution of 15-arcmin, 6-arcmin, 3-arcmin, and 1-arcmin
+
+"""
 
 ## Boundary of the basin
 W = -90.000
