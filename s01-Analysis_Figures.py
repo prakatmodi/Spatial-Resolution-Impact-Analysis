@@ -93,52 +93,52 @@ MRIVLEN01 = np.array(pd.read_csv(work_folder+'/analysis/MRIVLEN01.csv'))
 
 
 ## For the 15 min data
-BSN15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-RHGT15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-NXTXY15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-UPARA15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-DXY15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-LONLAT15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-NXTDST15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-RIVLEN15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-ELEVTN15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
-RIVWTH15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/15_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+BSN15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+RHGT15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+NXTXY15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+UPARA15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+DXY15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+LONLAT15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+NXTDST15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+RIVLEN15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+ELEVTN15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
+RIVWTH15 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/15_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize15),np.int32((E-W)/csize15))
 
 ## For the 06 min data
-BSN06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-RHGT06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-NXTXY06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-UPARA06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-DXY06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-LONLAT06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-NXTDST06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-RIVLEN06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-ELEVTN06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
-RIVWTH06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/06_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+BSN06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+RHGT06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+NXTXY06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+UPARA06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+DXY06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+LONLAT06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+NXTDST06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+RIVLEN06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+ELEVTN06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
+RIVWTH06 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/06_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize06),np.int32((E-W)/csize06))
 
 ## For the 03 min data
-BSN03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-RHGT03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-NXTXY03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-UPARA03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-DXY03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-LONLAT03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-NXTDST03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-RIVLEN03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-ELEVTN03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
-RIVWTH03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/03_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+BSN03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+RHGT03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+NXTXY03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+UPARA03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+DXY03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+LONLAT03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+NXTDST03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+RIVLEN03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+ELEVTN03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
+RIVWTH03 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/03_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize03),np.int32((E-W)/csize03))
 
 ## For the 01 min data
-BSN01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-RHGT01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-NXTXY01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-UPARA01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-DXY01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-LONLAT01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-NXTDST01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-RIVLEN01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-ELEVTN01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
-RIVWTH01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/map/01_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+BSN01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/basin.bin",dtype=np.int32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+RHGT01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/rivhgt.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+NXTXY01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/nextxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+UPARA01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/uparea.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+DXY01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/downxy.bin",dtype=np.int32).reshape(-1,np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+LONLAT01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/lonlat.bin",dtype=np.float32).reshape(-1,np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+NXTDST01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/nxtdst.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+RIVLEN01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/rivlen.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+ELEVTN01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/elevtn.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
+RIVWTH01 = np.fromfile(work_folder+"/CaMa-Flood_v4/map/01_amz/rivwth_gwdlr.bin",dtype=np.float32).reshape(np.int32((N-S)/csize01),np.int32((E-W)/csize01))
 
 
 #%% river channel pixels
@@ -156,10 +156,10 @@ loc_01 = np.column_stack((loc_01["ROW"].astype(np.int32),loc_01["COL"].astype(in
 
 # ---------------------------------------------------------------------------- #
 # %% Import Discharge for 2008
-AMZDIS01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,2100,3000)+ np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZDIS03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,700,1000)+np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZDIS06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)+np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZDIS15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)+np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZDIS01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,2100,3000)+ np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
+AMZDIS03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,700,1000)+np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,700,1000)
+AMZDIS06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)+np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,350,500)
+AMZDIS15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)+np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/fldout2008.bin",dtype=np.float32).reshape(-1,140,200)
 
 
 #%% NNSE , RMSE, R2 for discharge
@@ -211,10 +211,10 @@ print(qmetric_06_15)
 
 
 # %% Import River Water Depth for 2008
-AMZDPH01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZDPH03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZDPH06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZDPH15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZDPH01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,2100,3000)
+AMZDPH03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,700,1000)
+AMZDPH06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,350,500)
+AMZDPH15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/rivdph2008.bin",dtype=np.float32).reshape(-1,140,200)
 ## NNSE, RMSE, R2 for RWD
 ## NNSE Calculation for RWD
 nnse_15_06_Damz = []
@@ -264,10 +264,10 @@ print(dmetric_06_15)
 
 
 # %% Import Water surface elevation for 2008
-AMZWSE01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZWSE03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZWSE06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZWSE15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZWSE01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,2100,3000)
+AMZWSE03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,700,1000)
+AMZWSE06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,350,500)
+AMZWSE15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/sfcelv2008.bin",dtype=np.float32).reshape(-1,140,200)
 
 ## Main River Discharge
 MDIS01 = AMZDIS01[:,MRIVLOC01[:,0],MRIVLOC01[:,1]]
@@ -1362,10 +1362,10 @@ plt.savefig(work_folder+"/analysis/Spatial_D_NNSE_rsqr_01_03_06_15_p1.jpg",dpi=5
 # ------------------------------- flooded area ------------------------------- #
 
 #  %% Flooded Area Comparion for Various Zones 
-fldare_15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/fldare2008.bin",np.float32).reshape(-1,140,200)
-fldare_06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/fldare2008.bin",np.float32).reshape(-1,350,500)
-fldare_03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/fldare2008.bin",np.float32).reshape(-1,700,1000)
-fldare_01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/fldare2008.bin",np.float32).reshape(-1,2100,3000)
+fldare_15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/fldare2008.bin",np.float32).reshape(-1,140,200)
+fldare_06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/fldare2008.bin",np.float32).reshape(-1,350,500)
+fldare_03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/fldare2008.bin",np.float32).reshape(-1,700,1000)
+fldare_01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/fldare2008.bin",np.float32).reshape(-1,2100,3000)
 
 # Lat=-2.5 to -5.0 Lon= -62.5 to -58.5
 fld15 = []
@@ -1801,41 +1801,41 @@ plt.savefig(work_folder+'/analysis/zone5_3sec.jpg',dpi=500,bbox_inches='tight')
 ################## ------------------ Lowest Performance ------------------ ####################
 
 ## Import river discharge with bifurcation scheme
-AMZRDIS01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZRDIS03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZRDIS06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZRDIS15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZRDIS01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
+AMZRDIS03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,700,1000)
+AMZRDIS06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)
+AMZRDIS15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)
 
 # import bifurcation outflow 
-AMZBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
+AMZBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,700,1000)
+AMZBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,350,500)
+AMZBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,140,200)
 
 ## Import river discharge wthout bifurcation scheme
-AMZRDISWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZRDISWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZRDISWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZRDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic_nobf/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZRDISWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
+AMZRDISWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,700,1000)
+AMZRDISWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)
+AMZRDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobf/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)
 
 ## Import discharge wthout bifurcation scheme
-AMZDISWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,2100,3000) + AMZRDISWBF01
-AMZDISWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,700,1000) + AMZRDISWBF03
-AMZDISWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,350,500) + AMZRDISWBF06
-AMZDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic_nobf/fldout2008.bin",dtype=np.float32).reshape(-1,140,200) + AMZRDISWBF15
+AMZDISWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,2100,3000) + AMZRDISWBF01
+AMZDISWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,700,1000) + AMZRDISWBF03
+AMZDISWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,350,500) + AMZRDISWBF06
+AMZDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobf/fldout2008.bin",dtype=np.float32).reshape(-1,140,200) + AMZRDISWBF15
 
 
 # import without bifurcation river depth 
-AMZDPHWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZDPHWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZDPHWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZDPHWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic_nobf/rivdph2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZDPHWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,2100,3000)
+AMZDPHWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,700,1000)
+AMZDPHWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,350,500)
+AMZDPHWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobf/rivdph2008.bin",dtype=np.float32).reshape(-1,140,200)
 
 
-PTHFLW01 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/01_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
-PTHFLW03 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/03_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
-PTHFLW06 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/06_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)  
-PTHFLW15 = np.fromfile(work_folder+"/CaMa-Flood_v4.05/out/15_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
+PTHFLW01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
+PTHFLW03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
+PTHFLW06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)  
+PTHFLW15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
 
 
 PTHFLW01 = np.nansum(PTHFLW01,axis=1)
@@ -1868,10 +1868,10 @@ QPNXY01 = np.column_stack((nxtloc_01[1,:]-1,nxtloc_01[0,:]-1))
 
 nse_dis  = np.array(nnse_15_01_Qamz)[np.array(nnse_15_01_Qamz)<0.3]
 
-bifprm15 = pd.read_csv(work_folder+"/CaMa-Flood_v4.05/map/15_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
-bifprm06 = pd.read_csv(work_folder+"/CaMa-Flood_v4.05/map/06_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
-bifprm03 = pd.read_csv(work_folder+"/CaMa-Flood_v4.05/map/03_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
-bifprm01 = pd.read_csv(work_folder+"/CaMa-Flood_v4.05/map/01_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
+bifprm15 = pd.read_csv(work_folder+"/CaMa-Flood_v4/map/15_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
+bifprm06 = pd.read_csv(work_folder+"/CaMa-Flood_v4/map/06_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
+bifprm03 = pd.read_csv(work_folder+"/CaMa-Flood_v4/map/03_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
+bifprm01 = pd.read_csv(work_folder+"/CaMa-Flood_v4/map/01_amz/bifprm.txt",skiprows=1,header=None,delimiter="\s+")
 
 bifprm15 = np.array(bifprm15)
 
