@@ -358,7 +358,7 @@ lwidth_01 = (np.log10(RIVWTH01[TLOCROW01,TLOCCOL01]))/5
 # %% update to violin plot with cut = 0 and wihout inner plot mark maybe errorbars or lines for 80th and 90th percentile 
 
 #%% Dataframe and plot using seaborn 
-# violinplot: distributio NNSE values over the Amzaon
+# violinplot: NNSE values over the Amzaon
 NNSEQAMZ = pd.DataFrame(np.column_stack((nnse_03_01_Qamz,nnse_06_01_Qamz,nnse_15_01_Qamz,nnse_06_03_Qamz,nnse_15_03_Qamz,nnse_15_06_Qamz)),
 columns=['1 & 3 min','1 & 6 min','1 & 15 min','3 & 6 min','3 & 15 min','6 & 15 min'])
 fig, ax= plt.subplots(2,2,figsize=(28,20))
@@ -375,15 +375,14 @@ for i, column in enumerate(NNSEQAMZ.columns):
     #get the vertices
     x_coords = vplot1.collections[i].get_paths()[0].vertices[:, 0]
     xmin, xmax = x_coords.min(), x_coords.max()
-    # Calculate the 90th percentile
+    # Calculate percentiles
     p10 = NNSEQAMZ[column].quantile(0.10)
     p20 = NNSEQAMZ[column].quantile(0.20)
-    
+    p25 = NNSEQAMZ[column].quantile(0.25)
     ax[0, 0].scatter(x=(xmin+xmax)/2,y=p10,s=30,marker="*",c='k',label="10$^{th}$ percentile")
     ax[0, 0].scatter(x=(xmin+xmax)/2,y=p20,s=30,marker="+",c='k',label="20$^{th}$ percentile")
+    ax[0, 0].scatter(x=(xmin+xmax)/2,y=p25,s=30,marker="x",c='k',label="25$^{th}$ percentile")
 
-
-# sns.stripplot(data=NNSEQAMZ, alpha=0.5,edgecolor='k',palette=['green','blue','red','green','blue','green'],size=1,ax=ax[0,0])
 ax[0,0].set_xlabel("Spatial resolution",fontsize=22)
 ax[0,0].set_ylabel("NNSE",fontsize=22)
 ax[0,0].set_title("(a) NNSE comparison for discharge", fontsize=22, weight="bold",loc='left')
@@ -392,9 +391,9 @@ ax[0,0].set_yticks(np.arange(0,1.1,0.1))
 ax[0,0].tick_params(axis='both', which='major', labelsize=18)
 lines_labels = [ax[0,0].get_legend_handles_labels()]
 lines, labels = [sum(lol, []) for lol in zip(*lines_labels)]
-ax[0,0].legend(lines[0:2], labels[0:2],loc='lower right', markerscale=3, fontsize=18) 
+ax[0,0].legend(lines[0:3], labels[0:3],loc='lower right', markerscale=3.5, fontsize=18) 
 
-# violinplot: distribution of R2 values over amazon
+# violinplot: R2 values over amazon
 RSQRQAMZ = pd.DataFrame(np.column_stack((rsqr_03_01_Qamz,rsqr_06_01_Qamz,rsqr_15_01_Qamz,rsqr_06_03_Qamz,rsqr_15_03_Qamz,rsqr_15_06_Qamz)),
 columns=['1 & 3 min','1 & 6 min','1 & 15 min','3 & 6 min','3 & 15 min','6 & 15 min'])
 # fig, ax = plt.subplots(figsize=(16,9))
@@ -410,15 +409,15 @@ for i, column in enumerate(RSQRQAMZ.columns):
     #get the vertices
     x_coords = vplot2.collections[i].get_paths()[0].vertices[:, 0]
     xmin, xmax = x_coords.min(), x_coords.max()
-    # Calculate the 90th percentile
+    # Calculate the percentiles
     p10 = RSQRQAMZ[column].quantile(0.10)
     p20 = RSQRQAMZ[column].quantile(0.20)
-    
+    p25 = RSQRQAMZ[column].quantile(0.25)
     ax[1, 0].scatter(x=(xmin+xmax)/2,y=p10,s=30,marker="*",c='k',label="10$^{th}$ percentile")
     ax[1, 0].scatter(x=(xmin+xmax)/2,y=p20,s=30,marker="+",c='k',label="20$^{th}$ percentile")
+    ax[1, 0].scatter(x=(xmin+xmax)/2,y=p25,s=30,marker="x",c='k',label="25$^{th}$ percentile")
 
 
-# sns.stripplot(data=RSQRQAMZ, alpha=0.5,edgecolor='k',palette=['green','blue','red','green','blue','green'],size=1,ax=ax[1,0])
 ax[1,0].set_xlabel("Spatial resolution",fontsize=22)
 ax[1,0].set_ylabel("R\N{SUPERSCRIPT TWO}",fontsize=22)
 ax[1,0].set_title("(b) R\N{SUPERSCRIPT TWO} comparison for discharge", fontsize=22, weight="bold", loc='left')
@@ -427,9 +426,9 @@ ax[1,0].set_yticks(np.arange(0,1.1,0.1))
 ax[1,0].tick_params(axis='both', which='major', labelsize=18)
 lines_labels = [ax[1,0].get_legend_handles_labels()]
 lines, labels = [sum(lol, []) for lol in zip(*lines_labels)]
-ax[1,0].legend(lines[0:2], labels[0:2],loc='lower right', markerscale=3, fontsize=18)  
+ax[1,0].legend(lines[0:3], labels[0:3],loc='lower right', markerscale=3.5, fontsize=18)  
 
-# violinplot: distributio NNSE values over the Amzaon
+# violinplot: NNSE values over the Amzaon
 NNSEDAMZ = pd.DataFrame(np.column_stack((nnse_03_01_Damz,nnse_06_01_Damz,nnse_15_01_Damz,nnse_06_03_Damz,nnse_15_03_Damz,nnse_15_06_Damz)),
 columns=['1 & 3 min','1 & 6 min','1 & 15 min','3 & 6 min','3 & 15 min','6 & 15 min'])
 vplot1 = sns.violinplot(data=NNSEDAMZ, palette=['green','blue','red','green','blue','green'],ax=ax[0,1],cut=0, inner=None)
@@ -444,12 +443,13 @@ for i, column in enumerate(NNSEDAMZ.columns):
     #get the vertices
     x_coords = vplot1.collections[i].get_paths()[0].vertices[:, 0]
     xmin, xmax = x_coords.min(), x_coords.max()
-    # Calculate the 90th percentile
+    # Calculate the percentiles
     p10 = NNSEDAMZ[column].quantile(0.10)
     p20 = NNSEDAMZ[column].quantile(0.20)
-    
+    p25 = NNSEDAMZ[column].quantile(0.25)
     ax[0,1].scatter(x=(xmin+xmax)/2,y=p10,s=30,marker="*",c='k',label="10$^{th}$ percentile")
     ax[0,1].scatter(x=(xmin+xmax)/2,y=p20,s=30,marker="+",c='k',label="20$^{th}$ percentile")
+    ax[0,1].scatter(x=(xmin+xmax)/2,y=p25,s=30,marker="x",c='k',label="25$^{th}$ percentile")
 
 # sns.stripplot(data=NNSEDAMZ, alpha=0.5,edgecolor='k',palette=['green','blue','red','green','blue','green'],size=1,ax=ax[0,1])
 ax[0,1].set_xlabel("Spatial resolution",fontsize=22)
@@ -460,9 +460,9 @@ ax[0,1].set_yticks(np.arange(0,1.1,0.1))
 ax[0,1].tick_params(axis='both', which='major', labelsize=18)
 lines_labels = [ax[0,1].get_legend_handles_labels()]
 lines, labels = [sum(lol, []) for lol in zip(*lines_labels)]
-ax[0,1].legend(lines[0:2], labels[0:2],loc='lower right', markerscale=3, fontsize=18)  
+ax[0,1].legend(lines[0:3], labels[0:3],loc='lower right', markerscale=3.5, fontsize=18)  
 
-# violinplot: distribution of R2 values over amazon
+# violinplot: R2 values over amazon
 RSQRDAMZ = pd.DataFrame(np.column_stack((rsqr_03_01_Damz,rsqr_06_01_Damz,rsqr_15_01_Damz,rsqr_06_03_Damz,rsqr_15_03_Damz,rsqr_15_06_Damz)),
 columns=['1 & 3 min','1 & 6 min','1 & 15 min','3 & 6 min','3 & 15 min','6 & 15 min'])
 vplot2 = sns.violinplot(data=RSQRDAMZ,  palette=['green','blue','red','green','blue','green'],ax=ax[1,1],cut=0, inner=None)
@@ -477,12 +477,14 @@ for i, column in enumerate(RSQRDAMZ.columns):
     #get the vertices
     x_coords = vplot2.collections[i].get_paths()[0].vertices[:, 0]
     xmin, xmax = x_coords.min(), x_coords.max()
-    # Calculate the 90th percentile
+    # Calculate the percentiles
     p10 = RSQRDAMZ[column].quantile(0.10)
     p20 = RSQRDAMZ[column].quantile(0.20)
+    p25 = RSQRDAMZ[column].quantile(0.25)
     
     ax[1,1].scatter(x=(xmin+xmax)/2,y=p10,s=30,marker="*",c='k',label="10$^{th}$ percentile")
     ax[1,1].scatter(x=(xmin+xmax)/2,y=p20,s=30,marker="+",c='k',label="20$^{th}$ percentile")
+    ax[1,1].scatter(x=(xmin+xmax)/2,y=p25,s=30,marker="x",c='k',label="25$^{th}$ percentile")
 
 # sns.stripplot(data=RSQRDAMZ, alpha=0.5,edgecolor='k',palette=['green','blue','red','green','blue','green'],size=1,ax=ax[1,1])
 ax[1,1].set_xlabel("Spatial resolution",fontsize=22)
@@ -493,7 +495,7 @@ ax[1,1].set_yticks(np.arange(0,1.1,0.1))
 ax[1,1].tick_params(axis='both', which='major', labelsize=18)
 lines_labels = [ax[1,1].get_legend_handles_labels()]
 lines, labels = [sum(lol, []) for lol in zip(*lines_labels)]
-ax[1,1].legend(lines[0:2], labels[0:2],loc='lower right', markerscale=3, fontsize=18)  
+ax[1,1].legend(lines[0:3], labels[0:3],loc='lower right', markerscale=3.5, fontsize=18)  
 plt.subplots_adjust(wspace=0.15)
 plt.savefig(work_folder+"/analysis/boxplt_QAMZ_DAMZ_NNSE_R2_v4.jpg",dpi=500,bbox_inches='tight')
 
