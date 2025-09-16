@@ -21,7 +21,7 @@ import matplotlib.patches as patches
 
 # ---------------------------------- Metrics --------------------------------- #
 
-#%% Metrics
+## Metrics
 # NNSE Function
 def nnse(sim, obs):
     num = 0
@@ -33,7 +33,7 @@ def nnse(sim, obs):
     return 1/(2-(1 - ((num)/(den))))
 
 
-# coefficeint of determination
+# coefficient of determination
 def rsqr(sim, obs):
     num = 0
     den = 0
@@ -56,10 +56,9 @@ def rsqr(sim, obs):
 # ----------------------- Import Data related to Rivers ---------------------- #
 
 """ 
-Make the regional Map data based on these map boundary before perfoming the analysis. 
-CaMa-FLood simulation should be pefromed using this map boundary for year 2008,
-for with and without bifurcation scheme 
-at various resolution of 15-arcmin, 6-arcmin, 3-arcmin, and 1-arcmin
+Make the regional map data based on below map boundary (basin boundary) before perfoming the analysis. 
+CaMa-FLood simulation should be pefromed using these map boundary for year 2008 with and 
+without bifurcation scheme at various resolution of 15-arcmin, 6-arcmin, 3-arcmin, and 1-arcmin
 
 """
 
@@ -75,7 +74,7 @@ csize06 = 1/10
 csize15 = 1/4
 
 # --------------------------- define working folder -------------------------- #
-#please define the root workign folder directory
+# Please define the root working folder directory
 work_folder = "/..."
 
 # ---------------------------------------------------------------------------- #
@@ -352,8 +351,6 @@ riv01lat = LONLAT01[1,loc_01[:,0],loc_01[:,1]]
 lwidth_06 = (np.log10(RIVWTH06[TLOCROW06,TLOCCOL06]))/5
 lwidth_03 = (np.log10(RIVWTH03[TLOCROW03,TLOCCOL03]))/5
 lwidth_01 = (np.log10(RIVWTH01[TLOCROW01,TLOCCOL01]))/5
-
-
 
 
 # ------------------------------ NNSE and R2 violin plot (Discharge and River water depth)------------------------------------------#
