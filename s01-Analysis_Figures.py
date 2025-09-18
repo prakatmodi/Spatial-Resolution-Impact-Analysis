@@ -2487,7 +2487,5 @@ ax.scatter(LONLAT15[0,DPXY15[:,0],DPXY15[:,1]],LONLAT15[1,DPXY15[:,0],DPXY15[:,1
 for i,j in zip(LONLAT15[0,DPXY15[:,0],DPXY15[:,1]],LONLAT15[1,DPXY15[:,0],DPXY15[:,1]]):
     ax.text(i,j,s=str(k),c='k',fontsize=14,ha=next(ha_cycle),va=next(va_cycle))
     k+=1
-
-
 plt.legend(loc="lower right", fontsize=16,markerscale=2)
 plt.savefig(work_folder+"/analysis/bad_Q_RWD.jpg",dpi=300,bbox_inches='tight')
