@@ -74,9 +74,10 @@ csize06 = 1/10
 csize15 = 1/4
 
 # --------------------------- define working folder -------------------------- #
-# Please define the root working folder directory
-work_folder = "/..."
+# Please define the working directory where the CaMa-Flood_v4 simulation data 
+# and analysis folder is located
 
+work_folder = "/..."
 # ---------------------------------------------------------------------------- #
 
 ## LOCATION (row and column)
@@ -201,12 +202,12 @@ for i in range(len(loc_15)):
     rsqr_03_01_Qamz.append(rsqr(AMZDIS03[:,loc_03[i,0],loc_03[i,1]],AMZDIS01[:,loc_01[i,0],loc_01[i,1]]))
 
 # Print 10th and 20th percentile
-qmetric_01_03 = [np.round(np.quantile(nnse_03_01_Qamz,[0.10,0.20]),2), np.round(np.quantile(rsqr_03_01_Qamz,[0.10,0.20]),2)]
-qmetric_01_06 = [np.round(np.quantile(nnse_06_01_Qamz,[0.10,0.20]),2), np.round(np.quantile(rsqr_06_01_Qamz,[0.10,0.20]),2)]
-qmetric_01_15 = [np.round(np.quantile(nnse_15_01_Qamz,[0.10,0.20]),2),np.round(np.quantile(rsqr_15_01_Qamz,[0.10,0.20]),2)]
-qmetric_03_06 = [np.round(np.quantile(nnse_06_03_Qamz,[0.10,0.20]),2), np.round(np.quantile(rsqr_06_03_Qamz,[0.10,0.20]),2)]
-qmetric_03_15 = [np.round(np.quantile(nnse_15_03_Qamz,[0.10,0.20]),2),np.round(np.quantile(rsqr_15_03_Qamz,[0.10,0.20]),2)]
-qmetric_06_15 = [np.round(np.quantile(nnse_15_06_Qamz,[0.10,0.20]),2),np.round(np.quantile(rsqr_15_06_Qamz,[0.10,0.20]),2)]
+qmetric_01_03 = [np.round(np.quantile(nnse_03_01_Qamz,[0.10,0.20,0.25]),2), np.round(np.quantile(rsqr_03_01_Qamz,[0.10,0.20,0.25]),2)]
+qmetric_01_06 = [np.round(np.quantile(nnse_06_01_Qamz,[0.10,0.20,0.25]),2), np.round(np.quantile(rsqr_06_01_Qamz,[0.10,0.20,0.25]),2)]
+qmetric_01_15 = [np.round(np.quantile(nnse_15_01_Qamz,[0.10,0.20,0.25]),2),np.round(np.quantile(rsqr_15_01_Qamz,[0.10,0.20,0.25]),2)]
+qmetric_03_06 = [np.round(np.quantile(nnse_06_03_Qamz,[0.10,0.20,0.25]),2), np.round(np.quantile(rsqr_06_03_Qamz,[0.10,0.20,0.25]),2)]
+qmetric_03_15 = [np.round(np.quantile(nnse_15_03_Qamz,[0.10,0.20,0.25]),2),np.round(np.quantile(rsqr_15_03_Qamz,[0.10,0.20,0.25]),2)]
+qmetric_06_15 = [np.round(np.quantile(nnse_15_06_Qamz,[0.10,0.20,0.25]),2),np.round(np.quantile(rsqr_15_06_Qamz,[0.10,0.20,0.25]),2)]
 print(qmetric_01_03)
 print(qmetric_01_06)
 print(qmetric_01_15)
@@ -254,12 +255,12 @@ for i in range(len(loc_15)):
     rsqr_03_01_Damz.append(rsqr(AMZDPH03[:,loc_03[i,0],loc_03[i,1]],AMZDPH01[:,loc_01[i,0],loc_01[i,1]]))
 
 ## 10th and 20th percentile 
-dmetric_01_03 = [np.round(np.quantile(nnse_03_01_Damz,[0.10, 0.20]),2), np.round(np.quantile(rsqr_03_01_Damz,[0.10, 0.20]),2)]
-dmetric_01_06 = [np.round(np.quantile(nnse_06_01_Damz,[0.10, 0.20]),2), np.round(np.quantile(rsqr_06_01_Damz,[0.10, 0.20]),2)]
-dmetric_01_15 = [np.round(np.quantile(nnse_15_01_Damz,[0.10, 0.20]),2),np.round(np.quantile(rsqr_15_01_Damz,[0.10, 0.20]),2)]
-dmetric_03_06 = [np.round(np.quantile(nnse_06_03_Damz,[0.10, 0.20]),2), np.round(np.quantile(rsqr_06_03_Damz,[0.10, 0.20]),2)]
-dmetric_03_15 = [np.round(np.quantile(nnse_15_03_Damz,[0.10, 0.20]),2),np.round(np.quantile(rsqr_15_03_Damz,[0.10, 0.20]),2)]
-dmetric_06_15 = [np.round(np.quantile(nnse_15_06_Damz,[0.10, 0.20]),2),np.round(np.quantile(rsqr_15_06_Damz,[0.10, 0.20]),2)]
+dmetric_01_03 = [np.round(np.quantile(nnse_03_01_Damz,[0.10, 0.20, 0.25]),2), np.round(np.quantile(rsqr_03_01_Damz,[0.10, 0.20, 0.25]),2)]
+dmetric_01_06 = [np.round(np.quantile(nnse_06_01_Damz,[0.10, 0.20, 0.25]),2), np.round(np.quantile(rsqr_06_01_Damz,[0.10, 0.20, 0.25]),2)]
+dmetric_01_15 = [np.round(np.quantile(nnse_15_01_Damz,[0.10, 0.20, 0.25]),2),np.round(np.quantile(rsqr_15_01_Damz,[0.10, 0.20, 0.25]),2)]
+dmetric_03_06 = [np.round(np.quantile(nnse_06_03_Damz,[0.10, 0.20, 0.25]),2), np.round(np.quantile(rsqr_06_03_Damz,[0.10, 0.20, 0.25]),2)]
+dmetric_03_15 = [np.round(np.quantile(nnse_15_03_Damz,[0.10, 0.20, 0.25]),2),np.round(np.quantile(rsqr_15_03_Damz,[0.10, 0.20, 0.25]),2)]
+dmetric_06_15 = [np.round(np.quantile(nnse_15_06_Damz,[0.10, 0.20, 0.25]),2),np.round(np.quantile(rsqr_15_06_Damz,[0.10, 0.20, 0.25]),2)]
 print(dmetric_01_03)
 print(dmetric_01_06)
 print(dmetric_01_15)
@@ -499,6 +500,12 @@ ax[1,1].legend(lines[0:3], labels[0:3],loc='lower right', markerscale=3.5, fonts
 plt.subplots_adjust(wspace=0.15)
 plt.savefig(work_folder+"/analysis/boxplt_QAMZ_DAMZ_NNSE_R2_v4.jpg",dpi=500,bbox_inches='tight')
 
+# ------------------------------- save the data ------------------------------ #
+NNSEQAMZ.to_csv(work_folder+"/analysis/NNSEQAMZ.csv",index=False)
+RSQRQAMZ.to_csv(work_folder+"/analysis/RSQRQAMZ.csv",index=False)
+NNSEDAMZ.to_csv(work_folder+"/analysis/NNSEDAMZ.csv",index=False)
+RSQRDAMZ.to_csv(work_folder+"/analysis/RSQRDAMZ.csv",index=False)
+# ---------------------------------------------------------------------------- #
 
 
 ########### ------------------------------- Spatial Distrbution of NNSE and R2 --------------------------------------- ################
@@ -511,7 +518,6 @@ norm1 = [-9999,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,2,3,4,5,6,7,8,9,10,20,30,
 
 ## for discharge 
 fig, ax = plt.subplots(2,2,figsize=(18,15))
-# m = Basemap(projection='cyl',llcrnrlat=-25,urcrnrlat=10,llcrnrlon=-90,urcrnrlon=-40,resolution='h')
 m = Basemap(projection='cyl',llcrnrlat=-20,urcrnrlat=5,llcrnrlon=-80,urcrnrlon=-50,resolution='h')
 m.drawcoastlines(color='lightgray',ax=ax[0,0])
 m.drawcountries(color='lightgray',ax=ax[0,0])
@@ -593,7 +599,6 @@ cbar1.set_label("NNSE",fontsize=15)
 ax[0,1].set_title("(c) NNSE (1min & 6min) for water depth",loc='left',fontsize=16,weight='bold')
 
 
-# m = Basemap(projection='cyl',llcrnrlat=-25,urcrnrlat=10,llcrnrlon=-90,urcrnrlon=-40,resolution='h')
 m = Basemap(projection='cyl',llcrnrlat=-20,urcrnrlat=5,llcrnrlon=-80,urcrnrlon=-50,resolution='h')
 m.drawcoastlines(color='lightgray',ax=ax[1,1])
 m.drawcountries(color='lightgray',ax=ax[1,1])
@@ -779,16 +784,39 @@ PTD15[PTD15 > 250] -= 366
 PTD15 = PTD15.transpose()
 
 
-
-
-
 # -------------------Time series along the mainstream --------------------------------------------------------- #
+# ------------------------------- save the data ------------------------------ #
+
+MAX_MIN_TIME_15min = pd.DataFrame(np.column_stack((MRIVLEN15.flatten()/1000,MDIS15.max(axis=0)/10**4,MDIS15.min(axis=0)/10**4,PTQ15.max(axis=0),PTQ15.min(axis=0),
+                                             MDPH15.max(axis=0),MDPH15.min(axis=0),PTD15.max(axis=0),PTD15.min(axis=0))),
+                                             columns=['River length (km)','Q (max, cub.m x10000)','Q (min, cub.m x10000) ','Time (max Q)','Time (minQ)',
+                                                      'RWD (max, m)','RWD (min, m)','Time (max RWD)','Time (min RWD)'])
+MAX_MIN_TIME_6min = pd.DataFrame(np.column_stack((MRIVLEN06.flatten()/1000,MDIS06.max(axis=0)/10**4,MDIS06.min(axis=0)/10**4,PTQ06.max(axis=0),PTQ06.min(axis=0),
+                                             MDPH06.max(axis=0),MDPH06.min(axis=0),PTD06.max(axis=0),PTD06.min(axis=0))),
+                                             columns=['River length (km)','Q (max, cub.m x10000)','Q (min, cub.m x10000) ','Time (max Q)','Time (minQ)',
+                                                      'RWD (max, m)','RWD (min, m)','Time (max RWD)','Time (min RWD)'])
+MAX_MIN_TIME_3min = pd.DataFrame(np.column_stack((MRIVLEN03.flatten()/1000,MDIS03.max(axis=0)/10**4,MDIS03.min(axis=0)/10**4,PTQ03.max(axis=0),PTQ03.min(axis=0),
+                                             MDPH03.max(axis=0),MDPH03.min(axis=0),PTD03.max(axis=0),PTD03.min(axis=0))),
+                                             columns=['River length (km)','Q (max, cub.m x10000)','Q (min, cub.m x10000) ','Time (max Q)','Time (minQ)',
+                                                      'RWD (max, m)','RWD (min, m)','Time (max RWD)','Time (min RWD)'])
+MAX_MIN_TIME_1min = pd.DataFrame(np.column_stack((MRIVLEN01.flatten()/1000,MDIS01.max(axis=0)/10**4,MDIS01.min(axis=0)/10**4,PTQ01.max(axis=0),PTQ01.min(axis=0),
+                                             MDPH01.max(axis=0),MDPH01.min(axis=0),PTD01.max(axis=0),PTD01.min(axis=0))),
+                                             columns=['River length (km)','Q (max, cub.m x10000)','Q (min, cub.m x10000) ','Time (max Q)','Time (minQ)',
+                                                      'RWD (max, m)','RWD (min, m)','Time (max RWD)','Time (min RWD)'])
+
+MAX_MIN_TIME_15min.to_csv(work_folder+"/analysis/Mainstream_15min_MAX_MIN_TIME.csv",index=False)
+MAX_MIN_TIME_6min.to_csv(work_folder+"/analysis/Mainstream_6min_MAX_MIN_TIME.csv",index=False)
+MAX_MIN_TIME_3min.to_csv(work_folder+"/analysis/Mainstream_3min_MAX_MIN_TIME.csv",index=False)
+MAX_MIN_TIME_1min.to_csv(work_folder+"/analysis/Mainstream_1min_MAX_MIN_TIME.csv",index=False)
+
+# ------------------- Plotting the range of discharge and river water depth along the mainstream --------------------------------------------------------- #
+
 ## Plot Q
 fig, ax2 = plt.subplots(2,2,figsize=(26,18))
-ax2[0,0].fill_between(MRIVLEN15.flatten()/1000,MDIS15.max(axis=0)/10**4,MDIS15.min(axis=0)/10**4,facecolor=(0,0,1,0.4),edgecolor=(0,0,1,0.8),label='15min',linestyle='-',alpha=0.4)
-ax2[0,0].fill_between(MRIVLEN06.flatten()/1000,MDIS06.max(axis=0)/10**4,MDIS06.min(axis=0)/10**4,facecolor=(0,0.6,0,0.4),edgecolor=(0,0.6,0,0.8),label='6min',linestyle='-',alpha=0.4)
-ax2[0,0].fill_between(MRIVLEN03.flatten()/1000,MDIS03.max(axis=0)/10**4,MDIS03.min(axis=0)/10**4,facecolor=(1,1,0,0.4),edgecolor=(1,1,0,0.8),label='3min',linestyle='-',alpha=0.4)
-ax2[0,0].fill_between(MRIVLEN01.flatten()/1000,MDIS01.max(axis=0)/10**4,MDIS01.min(axis=0)/10**4,facecolor=(1,0,0,0.4),edgecolor=(1,0,0,0.8),label='1min',linestyle='-',alpha=0.4)
+ax2[0,0].fill_between(MRIVLEN15.flatten()/1000,MDIS15.max(axis=0)/10**4,MDIS15.min(axis=0)/10**4,facecolor=(0,0,1,0.25),edgecolor=(0,0,1,1),label='15min',linestyle='-')
+ax2[0,0].fill_between(MRIVLEN06.flatten()/1000,MDIS06.max(axis=0)/10**4,MDIS06.min(axis=0)/10**4,facecolor=(0,0.6,0,0.25),edgecolor=(0,0.6,0,1),label='6min',linestyle='-')
+ax2[0,0].fill_between(MRIVLEN03.flatten()/1000,MDIS03.max(axis=0)/10**4,MDIS03.min(axis=0)/10**4,facecolor=(1,1,0,0.25),edgecolor=(1,1,0,1),label='3min',linestyle='-')
+ax2[0,0].fill_between(MRIVLEN01.flatten()/1000,MDIS01.max(axis=0)/10**4,MDIS01.min(axis=0)/10**4,facecolor=(1,0,0,0.25),edgecolor=(1,0,0,1),label='1min',linestyle='-')
 ax2[0,0].set_ylabel("Q range (m\N{SUPERSCRIPT THREE}/s) x 10\N{SUPERSCRIPT FOUR}",fontsize=22)
 ax2[0,0].grid(color='k', linestyle='--', linewidth=0.2, which='both')
 ax2[0,0].legend(title="Model resolution",loc='upper left',facecolor=(255/256,255/256,255/256),fontsize=17, title_fontsize=18)
@@ -798,10 +826,10 @@ ax2[0,0].set_title("(a) Discharge range", fontsize=22, weight="bold", loc='left'
 ax2[0,0].tick_params(axis='both', which='major', labelsize=16)
 
 ## Plot Q timing
-ax2[1,0].fill_between(MRIVLEN15.flatten()/1000,PTQ15.max(axis=0),PTQ15.min(axis=0),facecolor=(0,0,1,0.4),edgecolor=(0,0,1,0.8),label='15min',linestyle='-',alpha=0.4)
-ax2[1,0].fill_between(MRIVLEN06.flatten()/1000,PTQ06.max(axis=0),PTQ06.min(axis=0),facecolor=(0,0.6,0,0.4),edgecolor=(0,0.6,0,0.8),label='6min',linestyle='-',alpha=0.4)
-ax2[1,0].fill_between(MRIVLEN03.flatten()/1000,PTQ03.max(axis=0),PTQ03.min(axis=0),facecolor=(1,1,0,0.4),edgecolor=(1,1,0,0.8),label='3min',linestyle='-',alpha=0.4)
-ax2[1,0].fill_between(MRIVLEN01.flatten()/1000,PTQ01.max(axis=0),PTQ01.min(axis=0),facecolor=(1,0,0,0.4),edgecolor=(1,0,0,0.8),label='1min',linestyle='-',alpha=0.4)
+ax2[1,0].fill_between(MRIVLEN15.flatten()/1000,PTQ15.max(axis=0),PTQ15.min(axis=0),facecolor=(0,0,1,0.25),edgecolor=(0,0,1,1),label='15min',linestyle='-')
+ax2[1,0].fill_between(MRIVLEN06.flatten()/1000,PTQ06.max(axis=0),PTQ06.min(axis=0),facecolor=(0,0.6,0,0.25),edgecolor=(0,0.6,0,1),label='6min',linestyle='-')
+ax2[1,0].fill_between(MRIVLEN03.flatten()/1000,PTQ03.max(axis=0),PTQ03.min(axis=0),facecolor=(1,1,0,0.25),edgecolor=(1,1,0,1),label='3min',linestyle='-')
+ax2[1,0].fill_between(MRIVLEN01.flatten()/1000,PTQ01.max(axis=0),PTQ01.min(axis=0),facecolor=(1,0,0,0.25),edgecolor=(1,0,0,1),label='1min',linestyle='-')
 ax2[1,0].set_ylabel("Time range (days)",fontsize=22)
 ax2[1,0].grid(color='k', linestyle='--', linewidth=0.2, which='both')
 ax2[1,0].legend(title="Model resolution",loc='lower right',facecolor=(255/256,255/256,255/256),fontsize=17, title_fontsize=18)
@@ -811,10 +839,10 @@ ax2[1,0].set_title("(b) Discharge timing variation", fontsize=22, weight="bold",
 ax2[1,0].tick_params(axis='both', which='major', labelsize=16)
 
 ## Plot D
-ax2[0,1].fill_between(MRIVLEN15.flatten()/1000,MDPH15.max(axis=0),MDPH15.min(axis=0),facecolor=(0,0,1,0.4),edgecolor=(0,0,1,0.8),label='15min',linestyle='-')
-ax2[0,1].fill_between(MRIVLEN06.flatten()/1000,MDPH06.max(axis=0),MDPH06.min(axis=0),facecolor=(0,0.6,0,0.4),edgecolor=(0,0.6,0,0.8),label='6min',linestyle='-')
-ax2[0,1].fill_between(MRIVLEN03.flatten()/1000,MDPH03.max(axis=0),MDPH03.min(axis=0),facecolor=(1,1,0,0.4),edgecolor=(1,1,0,0.8),label='3min',linestyle='-')
-ax2[0,1].fill_between(MRIVLEN01.flatten()/1000,MDPH01.max(axis=0),MDPH01.min(axis=0),facecolor=(1,0,0,0.4),edgecolor=(1,0,0,0.8),label='1min',linestyle='-')
+ax2[0,1].fill_between(MRIVLEN15.flatten()/1000,MDPH15.max(axis=0),MDPH15.min(axis=0),facecolor=(0,0,1,0.25),edgecolor=(0,0,1,1),label='15min',linestyle='-')
+ax2[0,1].fill_between(MRIVLEN06.flatten()/1000,MDPH06.max(axis=0),MDPH06.min(axis=0),facecolor=(0,0.6,0,0.25),edgecolor=(0,0.6,0,1),label='6min',linestyle='-')
+ax2[0,1].fill_between(MRIVLEN03.flatten()/1000,MDPH03.max(axis=0),MDPH03.min(axis=0),facecolor=(1,1,0,0.25),edgecolor=(1,1,0,1),label='3min',linestyle='-')
+ax2[0,1].fill_between(MRIVLEN01.flatten()/1000,MDPH01.max(axis=0),MDPH01.min(axis=0),facecolor=(1,0,0,0.25),edgecolor=(1,0,0,1),label='1min',linestyle='-')
 ax2[0,1].set_ylabel("River depth range (m)",fontsize=22)
 ax2[0,1].grid(color='k', linestyle='--', linewidth=0.2, which='both')
 ax2[0,1].legend(title="Model resolution",loc='upper left',facecolor=(255/256,255/256,255/256),fontsize=17, title_fontsize=18)
@@ -824,10 +852,10 @@ ax2[0,1].set_title("(c) Water depth range", fontsize=22, weight="bold", loc='lef
 ax2[0,1].tick_params(axis='both', which='major', labelsize=16)
 
 ## Plot D timing
-ax2[1,1].fill_between(MRIVLEN15.flatten()/1000,PTD15.max(axis=0),PTD15.min(axis=0),facecolor=(0,0,1,0.4),edgecolor=(0,0,1,0.8),label='15min',linestyle='-')
-ax2[1,1].fill_between(MRIVLEN06.flatten()/1000,PTD06.max(axis=0),PTD06.min(axis=0),facecolor=(0,0.6,0,0.4),edgecolor=(0,0.6,0,0.8),label='6min',linestyle='-')
-ax2[1,1].fill_between(MRIVLEN03.flatten()/1000,PTD03.max(axis=0),PTD03.min(axis=0),facecolor=(1,1,0,0.4),edgecolor=(1,1,0,0.8),label='3min',linestyle='-')
-ax2[1,1].fill_between(MRIVLEN01.flatten()/1000,PTD01.max(axis=0),PTD01.min(axis=0),facecolor=(1,0,0,0.4),edgecolor=(1,0,0,0.8),label='1min',linestyle='-')
+ax2[1,1].fill_between(MRIVLEN15.flatten()/1000,PTD15.max(axis=0),PTD15.min(axis=0),facecolor=(0,0,1,0.25),edgecolor=(0,0,1,1),label='15min',linestyle='-')
+ax2[1,1].fill_between(MRIVLEN06.flatten()/1000,PTD06.max(axis=0),PTD06.min(axis=0),facecolor=(0,0.6,0,0.25),edgecolor=(0,0.6,0,1),label='6min',linestyle='-')
+ax2[1,1].fill_between(MRIVLEN03.flatten()/1000,PTD03.max(axis=0),PTD03.min(axis=0),facecolor=(1,1,0,0.25),edgecolor=(1,1,0,1),label='3min',linestyle='-')
+ax2[1,1].fill_between(MRIVLEN01.flatten()/1000,PTD01.max(axis=0),PTD01.min(axis=0),facecolor=(1,0,0,0.25),edgecolor=(1,0,0,1),label='1min',linestyle='-')
 ax2[1,1].set_ylabel("Time range (days)",fontsize=22)
 ax2[1,1].grid(color='k', linestyle='--', linewidth=0.2, which='both')
 ax2[1,1].legend(title="Model resolution",loc='lower right',facecolor=(255/256,255/256,255/256),fontsize=17, title_fontsize=18)
@@ -835,10 +863,9 @@ ax2[1,1].set_xlabel("<----- U/S    Distance from river mouth (km)    D/S ------>
 ax2[1,1].invert_xaxis()
 ax2[1,1].set_title("(d) Water depth timing variation", fontsize=22, weight="bold", loc='left')
 ax2[1,1].tick_params(axis='both', which='major', labelsize=16)
-plt.savefig(work_folder+'/analysis/MRIV_Q_D_Peak_Time_90p.jpg',dpi=500,bbox_inches='tight')
+plt.savefig(work_folder+'/analysis/MRIV_Q_D_Peak_Time.jpg',dpi=500,bbox_inches='tight')
 
 # ---------------------------------------------------------------------------- #
-
 
 # --- Good discharge and river water depth and stage dicharge curve for it --- #
 # at 351 loc 350
@@ -941,6 +968,19 @@ fig.legend(lines, labels,loc='lower center',ncol=4, markerscale=20,fontsize=12)
 plt.subplots_adjust(hspace=0.35,bottom=0.075)
 
 plt.savefig(work_folder+'/analysis/timseries_stage_discahrge.jpg',dpi=300,bbox_inches='tight')
+
+# ------------------------------- save the data ------------------------------ #
+TIMSERIES_Q_D = pd.DataFrame(np.column_stack((AMZDIS01[:,loc_01[pos1,0],loc_01[pos1,1]],AMZDPH01[:,loc_01[pos1,0],loc_01[pos1,1]],
+                                              AMZDIS03[:,loc_03[pos1,0],loc_03[pos1,1]],AMZDPH03[:,loc_03[pos1,0],loc_03[pos1,1]],
+                                              AMZDIS06[:,loc_06[pos1,0],loc_06[pos1,1]],AMZDPH06[:,loc_06[pos1,0],loc_06[pos1,1]],
+                                              AMZDIS15[:,loc_15[pos1,0],loc_15[pos1,1]],AMZDPH15[:,loc_15[pos1,0],loc_15[pos1,1]],
+                                              AMZDIS01[:,loc_01[pos2,0],loc_01[pos2,1]],AMZDPH01[:,loc_01[pos2,0],loc_01[pos2,1]],
+                                              AMZDIS03[:,loc_03[pos2,0],loc_03[pos2,1]],AMZDPH03[:,loc_03[pos2,0],loc_03[pos2,1]],
+                                              AMZDIS06[:,loc_06[pos2,0],loc_06[pos2,1]],AMZDPH06[:,loc_06[pos2,0],loc_06[pos2,1]],
+                                              AMZDIS15[:,loc_15[pos2,0],loc_15[pos2,1]],AMZDPH15[:,loc_15[pos2,0],loc_15[pos2,1]])),
+                             columns=['Q 1min 351','D 1min 351','Q 3min 351','D 3min 351','Q 6min 351','D 6min 351','Q 15min 351','D 15min 351',
+                                      'Q 1min 9','D 1min 9','Q 3min 9','D 3min 9','Q 6min 9','D 6min 9','Q 15min 9','D 15min 9'])
+TIMSERIES_Q_D.to_csv(work_folder+"/analysis/Time_series_Q_D_Stations_351_9.csv",index=False)
 
 ######### --------------------------------------------- All Others (For Supplementary) ------------------------------ ###########
 
@@ -1085,7 +1125,7 @@ ax.annotate("1",(-62.5+2,-2.5-1.45),color='blue', weight='bold', fontsize=12, ha
 
 
 plt.legend(loc="lower right", fontsize=18,markerscale=3)
-plt.savefig(work_folder+"/analysis/vitual_stations_1.jpg",dpi=300,bbox_inches='tight')
+plt.savefig(work_folder+"/analysis/vitual_stations.jpg",dpi=300,bbox_inches='tight')
 
 # -------------------- Spatial distrbution of NNSE and R2 -------------------- #
 
@@ -1223,7 +1263,7 @@ cbar11.set_label("R\N{SUPERSCRIPT TWO}",fontsize=15)
 ax[0,1].set_title("(d) R\N{SUPERSCRIPT TWO} (1min & 3min)",loc='left',fontsize=16,weight='bold')
 # # # plt.savefig(work_folder+'/analysis/Spatial_Q_NNSE_rsqr_01_03_06_15.jpg",dpi=500,bbox_inches='tight')
 plt.subplots_adjust(hspace=0.2,wspace=0.05)
-plt.savefig(work_folder+"/analysis/Spatial_Q_NNSE_rsqr_01_03_06_15_p1.jpg",dpi=500,bbox_inches='tight')
+plt.savefig(work_folder+"/analysis/Spatial_Q_NNSE_rsqr_01_03_06_15.jpg",dpi=500,bbox_inches='tight')
 
 
 # -------------------------------- Water depth ------------------------------- #
@@ -1358,7 +1398,7 @@ cbar11 = m.colorbar(im11,location='bottom',extend='both',aspect=20,shrink=0.5,pa
 cbar11.set_label("R\N{SUPERSCRIPT TWO}",fontsize=15)
 ax[0,1].set_title("(d) R\N{SUPERSCRIPT TWO} (1min & 3min)",loc='left',fontsize=16,weight='bold')
 plt.subplots_adjust(hspace=0.2,wspace=0.05)
-plt.savefig(work_folder+"/analysis/Spatial_D_NNSE_rsqr_01_03_06_15_p1.jpg",dpi=500,bbox_inches='tight')
+plt.savefig(work_folder+"/analysis/Spatial_D_NNSE_rsqr_01_03_06_15.jpg",dpi=500,bbox_inches='tight')
 
 
 
@@ -1811,40 +1851,21 @@ AMZRDIS03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/rivout2008.bi
 AMZRDIS06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)
 AMZRDIS15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)
 
-# import bifurcation outflow 
-AMZBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/pthout2008.bin",dtype=np.float32).reshape(-1,140,200)
-
 ## Import river discharge wthout bifurcation scheme
 AMZRDISWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,2100,3000)
 AMZRDISWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,700,1000)
 AMZRDISWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZRDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobf/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)
+AMZRDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobif/rivout2008.bin",dtype=np.float32).reshape(-1,140,200)
 
 ## Import discharge wthout bifurcation scheme
 AMZDISWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,2100,3000) + AMZRDISWBF01
 AMZDISWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,700,1000) + AMZRDISWBF03
 AMZDISWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,350,500) + AMZRDISWBF06
-AMZDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobf/fldout2008.bin",dtype=np.float32).reshape(-1,140,200) + AMZRDISWBF15
+AMZDISWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobif/fldout2008.bin",dtype=np.float32).reshape(-1,140,200) + AMZRDISWBF15
 
-
-# import without bifurcation river depth 
-AMZDPHWBF01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,2100,3000)
-AMZDPHWBF03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,700,1000)
-AMZDPHWBF06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic_nobif/rivdph2008.bin",dtype=np.float32).reshape(-1,350,500)
-AMZDPHWBF15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic_nobf/rivdph2008.bin",dtype=np.float32).reshape(-1,140,200)
-
-
-PTHFLW01 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/01_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
-PTHFLW03 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/03_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
 PTHFLW06 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/06_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)  
 PTHFLW15 = np.fromfile(work_folder+"/CaMa-Flood_v4/out/15_amz_vic/pthflw2008.pth",dtype=np.float32).reshape(366,5,-1)
 
-
-PTHFLW01 = np.nansum(PTHFLW01,axis=1)
-PTHFLW03 = np.nansum(PTHFLW03,axis=1)
 PTHFLW06 = np.nansum(PTHFLW06,axis=1)
 PTHFLW15 = np.nansum(PTHFLW15,axis=1)
 
@@ -1944,7 +1965,16 @@ ax[2,1].set_title("("+chr(102)+") 1min",fontsize=16, loc='left',weight="bold")
 
 plt.savefig(work_folder+'/analysis/bifurcation_BF_2.jpg',dpi=500,bbox_inches='tight')
 
+# ------------------------------- save the data ------------------------------ #
+BIF_DATA_LOC2 = pd.DataFrame(np.column_stack((AMZDIS01[:,QPXY01[k+j,0],QPXY01[k+j,1]], AMZDIS03[:,QPXY03[k+j,0],QPXY03[k+j,1]], 
+                                 AMZDIS06[:,QPXY06[k+j,0],QPXY06[k+j,1]], AMZDIS15[:,QPXY15[k+j,0],QPXY15[k+j,1]],
+                                 AMZDISWBF01[:,QPXY01[k+j,0],QPXY01[k+j,1]], AMZDISWBF03[:,QPXY03[k+j,0],QPXY03[k+j,1]],
+                                 AMZDISWBF06[:,QPXY06[k+j,0],QPXY06[k+j,1]], AMZDISWBF15[:,QPXY15[k+j,0],QPXY15[k+j,1]],
+                                 PTHFLW15[:,299-1], PTHFLW06[:,2606-1])), columns=['1min_BF','3min_BF', '6min_BF', '15min_BF', 
+                                                                                   '1min_NBF','3min_NBF', '6min_NBF', '15min_NBF',
+                                                                                   'PTHFLW_15min','PTHFLW_6min'])
 
+BIF_DATA_LOC2.to_csv(work_folder+"/analysis/BIF_Q_LOC2.csv",index=False)
 
 # ------------------------------ for location 6  backwater effect ------------------------------ #
 fig,ax = plt.subplots(figsize=(22,5),nrows=1,ncols=2)
@@ -1965,6 +1995,14 @@ ax[1].grid(linestyle=':')
 ax[1].legend(loc="lower right",fontsize=18)
 plt.subplots_adjust(wspace=0.1)
 plt.savefig(work_folder+'/analysis/backwater_BF_loc6.jpg',dpi=500,bbox_inches='tight')
+
+# ------------------------------- save the data ------------------------------ #
+BACKWATER_DATA_LOC6 = pd.DataFrame(np.column_stack((AMZDIS01[:,QPXY01[k,0],QPXY01[k,1]],AMZDPH01[:,QPXY01[k,0],QPXY01[k,1]],
+                                    AMZDIS03[:,QPXY03[k,0],QPXY03[k,1]],AMZDPH03[:,QPXY03[k,0],QPXY03[k,1]],
+                                    AMZDIS06[:,QPXY06[k,0],QPXY06[k,1]],AMZDPH06[:,QPXY06[k,0],QPXY06[k,1]],
+                                    AMZDIS15[:,QPXY15[k,0],QPXY15[k,1]],AMZDPH15[:,QPXY15[k,0],QPXY15[k,1]])), 
+                                    columns=['1min_Q','1min_RWD','3min_Q','3min_RWD','6min_Q','6min_RWD','15min_Q','15min_RWD'])
+BACKWATER_DATA_LOC6.to_csv(work_folder+"/analysis/BACKWATER_Q_RWD_LOC6.csv",index=False)
 
 
 # ----------------------- floodplain conveyance effect ----------------------- #
@@ -2017,7 +2055,19 @@ ax[1,1].set_yticks([])
 
 plt.savefig(work_folder+'/analysis/fldpln_conv_loc12.jpg',dpi=300,bbox_inches='tight')
 
-
+# ------------------------------- save the data ------------------------------ #
+FLDPLN_DATA_LOC12 = pd.DataFrame(np.column_stack((AMZDIS01[:,QPXY01[k,0],QPXY01[k,1]]-AMZRDIS01[:,QPXY01[k,0],QPXY01[k,1]],
+                                                  AMZDIS03[:,QPXY03[k,0],QPXY03[k,1]]-AMZRDIS03[:,QPXY03[k,0],QPXY03[k,1]],
+                                                  AMZDIS06[:,QPXY06[k,0],QPXY06[k,1]]-AMZRDIS06[:,QPXY06[k,0],QPXY06[k,1]],
+                                                  AMZDIS15[:,QPXY15[k,0],QPXY15[k,1]]-AMZRDIS15[:,QPXY15[k,0],QPXY15[k,1]],
+                                                  AMZRDIS01[:,QPXY01[k,0],QPXY01[k,1]], AMZRDIS03[:,QPXY03[k,0],QPXY03[k,1]],
+                                                  AMZRDIS06[:,QPXY06[k,0],QPXY06[k,1]], AMZRDIS15[:,QPXY15[k,0],QPXY15[k,1]],
+                                                  AMZDPH01[:,QPXY01[k,0],QPXY01[k,1]], AMZDPH03[:,QPXY03[k,0],QPXY03[k,1]],
+                                                  AMZDPH06[:,QPXY06[k,0],QPXY06[k,1]], AMZDPH15[:,QPXY15[k,0],QPXY15[k,1]])),
+                                                  columns=['1min_fldpln_Q', '3min_fldpln_Q', '6min_fldpln_Q', '15min_fldpln_Q',
+                                                           '1min_rivch_Q', '3min_rivch_Q', '6min_rivch_Q', '15min_rivch_Q',
+                                                           '1min_RWD','3min_RWD','6min_RWD','15min_RWD'])
+FLDPLN_DATA_LOC12.to_csv(work_folder+"/analysis/FLDPLN_Q_RWD_LOC12.csv",index=False)
 
 # ------------------ Dsicharge issue plots * 3 examples each ----------------- #
 
@@ -2231,30 +2281,39 @@ ax2.plot(MRIVLEN06/1000,MRIVWTH06[0:],'o-',color='lime',markersize=0,label="6 mi
 ax2.plot(MRIVLEN01/1000,MRIVWTH01[0:],'o-',color='coral',markersize=0,label="1 min",alpha=0.7,linewidth=0.8)
 
 for i in range(MRIVLEN15.shape[0]-1):
-    if((MRIVLEN15[i]/1000>=500)&(MRIVLEN15[i]/1000<=1600)):
-        ax2.text(MRIVLEN15[i]/1000,MRIVWTH15[i]+10,str(np.round(NNSE_15_1[i],2)),color='blue',fontsize=8)
-        ax2.text(MRIVLEN06_P[i]/1000,MRIVWTH06_P[i]-5,str(np.round(NNSE_06_1[i],2)),color='green',fontsize=8,ha='right')
+    if((MRIVLEN15[i]/1000>=700)&(MRIVLEN15[i]/1000<=1400)):
+        ax2.text(MRIVLEN15[i]/1000,MRIVWTH15[i]+10,str(np.round(NNSE_15_1[i],2)),color='blue',fontsize=12)
+        ax2.text(MRIVLEN06_P[i]/1000,MRIVWTH06_P[i]-5,str(np.round(NNSE_06_1[i],2)),color='green',fontsize=12,ha='right')
         ax2.scatter(MRIVLEN06_P[i]/1000,MRIVWTH06_P[i],s=2,color='green')
 ax2.set_ylabel("River width (m)",fontsize=18)
-ax2.legend(title="River width", loc='upper right', facecolor=(255/256,255/256,255/256), bbox_to_anchor=(1.00,1), fontsize=10, title_fontsize=10)
-ax2.set_xlim(500,1600)
+ax2.legend(title="River width", loc='upper right', facecolor=(255/256,255/256,255/256), bbox_to_anchor=(1.00,1), fontsize=11, title_fontsize=11)
+ax2.set_xlim(700,1400)
 ax2.tick_params(axis='both', labelsize=14)
 ax2.set_ylim(0,3500)
 ax=ax2.twinx()
-ax.plot(MRIVLEN15/1000,MWSE15,'--',color='blue',markersize=5,label="15 min",alpha=1,linewidth=0.8)
-ax.plot(MRIVLEN06/1000,MWSE06,'--',color='green',markersize=3,label="6 min",alpha=1,linewidth=0.8)
-ax.plot(MRIVLEN01/1000,MWSE01,'--',color='red',markersize=3,label="1 min",alpha=1,linewidth=0.8)
+ax.plot(MRIVLEN15/1000,MWSE15,'--',color='blue',markersize=5,label="15 min",alpha=1,linewidth=0.8,dashes=(6,4))
+ax.plot(MRIVLEN06/1000,MWSE06,'--',color='green',markersize=3,label="6 min",alpha=1,linewidth=0.8,dashes=(6,4))
+ax.plot(MRIVLEN01/1000,MWSE01,'--',color='red',markersize=3,label="1 min",alpha=1,linewidth=0.8,dashes=(6,4))
 ax.set_ylim(0,200)
 ax.tick_params(axis='y', labelsize=14)
 ax.set_ylabel("Mean WSE (m)",fontsize=18)
-ax.legend(title="Mean WSE ",loc='upper right',facecolor=(255/256,255/256,255/256),bbox_to_anchor=(0.91,1), fontsize=10, title_fontsize=10)
-ax2.set_xlabel("<----- U/S    Distance from tributary mouth (virtual station 587 )  D/S ------> ",fontsize=18)
+ax.legend(title="Mean WSE ",loc='upper right',facecolor=(255/256,255/256,255/256),bbox_to_anchor=(0.91,1), fontsize=11, title_fontsize=11)
+# ax2.set_xlabel("<----- U/S    Distance from tributary mouth (km; virtual station 587 )  D/S ------> ",fontsize=18)
+ax2.set_xlabel(r'$\longleftarrow$ U/S  Distance from tributary mouth (km; virtual station 587)  D/S $\longrightarrow$',fontsize=18)
 ax2.invert_xaxis()
 ax.grid(color='k', linestyle=':', linewidth=0.2, which='both')
 ax2.grid(color='k', linestyle=':', linewidth=0.2, which='both',axis='x')
 ax2.set_title("(a) Water depth bad perfomance for location 7 & 8",loc='left', fontsize=22, weight="bold")
 plt.savefig(work_folder+'/analysis/low_rwd_loc7_1_6_15min.jpg',dpi=500,bbox_inches='tight')
 
+# ------------------------------- save the data ------------------------------ #
+BOTTLENECK_DATA_15 = pd.DataFrame(np.column_stack((MRIVLEN15/1000,MRIVWTH15[0:],MWSE15,NNSE_15_1,NNSE_06_1)),columns=['RIVLEN_15min_km','RIVWTH_15min','Mean_WSE_15min','NNSE_15_1','NNSE_06_1'])
+BOTTLENECK_DATA_6 = pd.DataFrame(np.column_stack((MRIVLEN06/1000,MRIVWTH06[0:],MWSE06)), columns=['RIVLEN_6min_km','RIVWTH_6min','Mean_WSE_6min'])
+BOTTLENECK_DATA_1 = pd.DataFrame(np.column_stack((MRIVLEN01/1000,MRIVWTH01[0:],MWSE01)), columns=['RIVLEN_1min_km','RIVWTH_1min','Mean_WSE_1min'])
+
+BOTTLENECK_DATA_15.to_csv(work_folder+"/analysis/BOTTLENECK_DATA_15.csv",index=False)
+BOTTLENECK_DATA_6.to_csv(work_folder+"/analysis/BOTTLENECK_DATA_6.csv",index=False)
+BOTTLENECK_DATA_1.to_csv(work_folder+"/analysis/BOTTLENECK_DATA_1.csv",index=False)
 
 # --------------- spatial distrbution of various bad locations --------------- #
 # For Meridians and Parallels (Subbasin Boundaries)
